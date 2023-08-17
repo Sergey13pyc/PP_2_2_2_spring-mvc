@@ -14,9 +14,10 @@ public class HelloController {
 	@GetMapping(value = "/")
 	public String printWelcome(ModelMap model) {
 		List<String> messages = new ArrayList<>();
-		messages.add("Hello!");
-		messages.add("I'm Spring MVC application");
-		messages.add("5.2.0 version by sep'19 ");
+		messages.add("Добро пожаловать, уважаемый пользователь!");
+		messages.add("Это стартовая страница");
+		messages.add("В адресной строке браузера тебе нужно ввести: http://localhost:8080/cars?count=x ");
+		messages.add("Где x - это колличество желаемых для отображения автомобилей ");
 		model.addAttribute("messages", messages);
 		return "index";
 	}
